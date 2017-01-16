@@ -43,6 +43,7 @@ android/app/libs
 
 # VS Code
 .vscode/*
+*.db
 
 # fastlane
 #
