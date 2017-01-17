@@ -41,16 +41,6 @@ buck-out/
 android/app/libs
 *.keystore
 
-# VS Code
-.vscode/*
-*.db
-albums/.vscode/.browse.VC.db
-*.db
-auth/.vscode/.browse.VC.db
-*.db
-techstack/.vscode/.browse.VC.db
-*.db
-
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
