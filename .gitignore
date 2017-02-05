@@ -50,6 +50,8 @@ auth/.vscode/.browse.VC.db
 *.db
 techstack/.vscode/.browse.VC.db
 *.db
+manager/.vscode/.browse.VC.db
+*.db
 
 # fastlane
 #
