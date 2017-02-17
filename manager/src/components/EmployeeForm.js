@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { View, Text, Picker } from 'react-native';
 import { connect } from 'react-redux';
@@ -5,6 +6,7 @@ import { employeeUpdate } from '../actions';
 import { CardSection, Input } from './common';
 
 class EmployeeForm extends Component {
+  
   render() {
     return (
     <View>
@@ -21,7 +23,7 @@ class EmployeeForm extends Component {
         <Input
           label="Phone"
           placeholder="555-555-5555"
-          values={this.props.phone}
+          value={this.props.phone}
           onChangeText={text => this.props.employeeUpdate({ prop: 'phone', value: text })}
         />
       </CardSection>
