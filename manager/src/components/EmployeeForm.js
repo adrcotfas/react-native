@@ -11,7 +11,7 @@ class EmployeeForm extends Component {
       <CardSection>
         <Input
           label="Name"
-          placeholder="Dorel"
+          placeholder="Name"
           value={this.props.name}
           onChangeText={text => this.props.employeeUpdate({ prop: 'name', value: text })}
         />
@@ -60,4 +60,4 @@ const mapStateToProps = (state) => {
   return { name, phone, shift };
 };
 
-export default connect(null, { employeeUpdate })(EmployeeForm);
+export default connect(mapStateToProps, { employeeUpdate })(EmployeeForm);
