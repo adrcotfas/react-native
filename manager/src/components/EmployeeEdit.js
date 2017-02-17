@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 import EmployeeForm from './EmployeeForm';
-import { employeeUpdate, employeeSave } from '../actions';
+import { employeeUpdate, employeeSave, employeeReset } from '../actions';
 import { Card, CardSection, Button } from './common';
 
 class EmployeeEdit extends Component {
@@ -11,6 +11,10 @@ componentWillMount() {
   _.each(this.props.employee, (value, prop) => {
     this.props.employeeUpdate({ prop, value });
   });
+}
+
+componentWillUnmount() {
+  this.props.employeeReset();
 }
 
 onButtonPress() {
@@ -37,4 +41,4 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, 
-{ employeeUpdate, employeeSave })(EmployeeEdit);
+{ employeeUpdate, employeeSave, employeeReset })(EmployeeEdit);

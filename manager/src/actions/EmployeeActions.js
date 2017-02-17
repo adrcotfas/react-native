@@ -48,3 +48,10 @@ export const employeeSave = ({ name, phone, shift, uid }) => {
     });
   };
 };
+
+export const employeeReset = () => {
+  return (dispatch) => {
+      dispatch({ type: EMPLOYEE_SAVE_SUCCESS });
+      Actions.employeeList({ type: 'reset' });
+  };
+};
